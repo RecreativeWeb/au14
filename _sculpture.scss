@@ -1,0 +1,48 @@
+.sculpture{
+	h2{
+		font-size: 3rem;
+		text-align: center;
+	}
+	.sculptureContent{
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		.col{
+			width: 98%;
+			border: 1px solid white;
+			height: 300vh;
+		}
+	}
+}
+
+@media screen and(min-width: 501px){
+	.sculpture{
+		h2{
+			font-size: 3.5rem;
+		}
+		.sculptureContent{
+			.col{
+				width: 48%;
+				border: 2px solid white;
+			}
+		}
+	}
+}
+
+@media screen and(min-width: 761px){
+	.sculpture{
+		h2{
+			font-size: 4rem;
+		}
+		.sculptureContent{
+			.col{
+				width: 30%;
+				border: 3px solid white;
+			}
+		}
+	}
+}
+
+@media screen and(min-width: 991px){
+	
+}
