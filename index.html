@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Le Quatorze - Arts et Décos</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Arizonia" rel="stylesheet">	
@@ -10,20 +11,28 @@
 	<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">	
 	<link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
 
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,400,400i,700" rel="stylesheet">
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header>
-		<h1>Le Quatorze <br /> Arts et Décos</h1>
-		<p>
+		<h1>Le Quatorze à Domme<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Arts et Décos</h1>
+		<!-- <p>
 			Peintures & sculptures & livres anciens & meubles & objets vintage & collections
-		</p>
+		</p> -->
 		<nav>
 			<ul>
 				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Peintures</a></li>
 				<li><a href="#">Sculptures</a></li>
+				<li><a href="#">Peintures</a></li>
 				<li><a href="#">Meubles</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
@@ -32,19 +41,34 @@
 	<main>
 
 		<section class="accueil">
-			<h2>Le Quatorze ou la Rencontre des Styles</h2>
+
+			<div class="autoplay">
+				<div><img src="images/vitrine/vitrine1.png" alt=""></div>
+				<div><img src="images/vitrine/vitrine2.jpg" alt=""></div>
+				<div><img src="images/vitrine/vitrine3.jpg" alt=""></div>
+			</div>
+
+			<h2>Exposition permanente: Marc Largaud & Alain Poeydomenge, le Quatorze ou la Rencontre des Styles</h2>
 			<p>
 				La rencontre de deux hommes amoureux de tous les arts. 
-				L'un sculpteur bien connu à Domme où il est arrivé à l'age de 10, le second, peintre et collectionneur, qui a quitté Domme à l'âge de 10 ans pour y revenir passer sa retraite dans cette cité aimée de tous... deux hommes vrais et sincères ayant ressenti le besoin d'exposer au même moment.
-				L'atelier Marc Largaud et la boutique vintage, décos, livres anciens, meubles et tableaux d'Alain Poeydomenge, se sont donc associé pour ouvrir pour vous la boutqie Le Quatorze au coeur de Domme... tout prés de la petite école qui les a vu user leurs fonds de culottes courtes, les jeans n'étaient pas encore à la mode!
+				L'un sculpteur bien connu à Domme où il est arrivé à l'age de 10, le second, peintre et collectionneur, qui a quitté Domme à l'âge de 10 ans pour y revenir passer sa retraite dans cette cité aimée de tous. <br>Deux hommes vrais et sincères ayant ressenti le besoin d'exposer au même moment.
+				L'atelier Marc Largaud et la boutique vintage, décos, livres anciens, meubles et tableaux d'Alain Poeydomenge, se sont donc associé pour ouvrir pour vous la boutique Le Quatorze au coeur de Domme... tout prés de la petite école qui les a vu user leurs fonds de culottes courtes, les jeans n'étaient pas encore à la mode!
 			</p>
+			<div class="portrait">
+				<picture>
+					<source>
+					<source>
+					<img src="images/portraits/marc.jpg" alt="">
+				</picture>
+				<picture>
+					<source>
+					<source>
+					<img src="images/portraits/alain.jpg" alt="">
+				</picture>
+			</div>
 		</section>
 
 		<section class="expo">
-			<h2>Exposition permanente: MARC LARGAUD</h2>
-			<p>
-				
-			</p>
 			<h2>Artistes invités: MICHEL CALVET - FRANCOIS VANDERBERG</h2>
 			<p>
 				
@@ -55,6 +79,7 @@
 
 		<section class="sculpture">
 			<h2>Sculpture</h2>
+			
 			<div class="Content">
 
 				<div class="col col1">
@@ -375,6 +400,25 @@
 	</main>
 
 	<footer></footer>
+
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick/slick.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+  			$('.autoplay').slick({
+		    	slidesToShow: 1,
+  				slidesToScroll: 1,
+  				autoplay: true,
+  				autoplaySpeed: 4000,
+		  });
+		});
+	</script>
+
+	
 </body>
 </html>
 

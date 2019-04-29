@@ -1,24 +1,79 @@
 header{
 	h1{
-    	font-family: 'Bad Script', cursive;
+    	font-family: 'Pacifico', cursive;
+font-family: 'Dancing Script', cursive;
+
 		font-size: 2rem;
 		text-align: center;
 		line-height: 2rem;
 		padding: .4rem;
+		
+		            
+		background-size: contain;
+	}
+	nav{
+		ul{
+			li{
+				list-style-type: none;
+				a{
+					font-family: 'Raleway', sans-serif;
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
 @media screen and (min-width: 501px){
+	header{
+		h1{
+			/*br{
+				display: none;
+			}*/
+		}
+	}
 
 }
 @media screen and (min-width: 761px){
-	h1{
-		font-size: 3rem;
-		line-height: 3rem;
+	position: fixed;
+	top: 0;
+	header{
+		height: 250px;
+		h1{
+			font-size: 3rem;
+			line-height: 3rem;
+			padding: 1rem;
+		}
+		nav{
+			margin: 2.3rem auto 1.5rem;
+			ul{
+				display: flex;
+				justify-content: space-around;
+				li{
+					width: 18%;
+					border-top: 1px solid black;
+					border-bottom: 1px solid black;
+					padding-top: .4rem;
+					padding-bottom: .4rem;
+					a{
+						color: black;
+						font-size: 1.1rem;
+						line-height: 1.1rem;
+						display: block;
+						text-align: center;
+					}
+				}
+			}
+		}
 	}	
 }
 @media screen and (min-width: 991px){
-	h1{
-		font-size: 5rem;
-		line-height: 6rem;
+	header{
+		h1{
+			background: url("images/site/carre.png") no-repeat 40%,
+		                url("images/site/cover.jpg") no-repeat left 40% top 50%;
+            background-size: contain;
+			padding-top: 3rem;
+    		padding-left: 6rem;
+		}
 	}
 }
