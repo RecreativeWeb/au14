@@ -1,30 +1,74 @@
-header{
-	h1{
-    	font-family: 'Pacifico', cursive;
-font-family: 'Dancing Script', cursive;
-
-		font-size: 2rem;
-		text-align: center;
-		line-height: 2rem;
-		padding: .4rem;
-		
-		            
-		background-size: contain;
-	}
+.fixed{
+	width: 100%;
+	max-width: 1200px;
+	height: 75px;
+	position: fixed;
+	z-index: 5000;
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	nav{
+		// display: none;
+		position: absolute;
+		top: 0;
+		left: -50%;
+		width: 50%;
+		background-color: black;
+		transform: left 1s ease;
+		&:target{
+			left: 50%;
+		}
 		ul{
 			li{
 				list-style-type: none;
 				a{
 					font-family: 'Raleway', sans-serif;
 					text-decoration: none;
+					color: white;
 				}
 			}
 		}
 	}
+	a{
+		display: block;
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+		.fas.fa-bars{
+			display: block;
+			font-size: 2.5rem;
+			cursor: pointer;
+		}
+	}
+	h1{
+		font-family: 'Pacifico', cursive;
+		font-family: 'Dancing Script', cursive;
+		font-size: 2.1rem;
+		text-align: center;
+		padding: 2.2rem 0 0 1.1rem;
+		background: url("images/site/carre.png") no-repeat 18% -2%,
+		            url("images/site/cover.jpg") no-repeat 20% 4%;     
+		background-size: contain;
+		.display{
+			display: none;
+		}
+	}
+	.line{
+		height: 2px;
+		width: 100%;
+		background: linear-gradient( to left, silver, black, silver);
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
 }
+
+
 @media screen and (min-width: 501px){
-	header{
+	.fixed{
+		height: 50px;
 		h1{
 			/*br{
 				display: none;
@@ -34,14 +78,11 @@ font-family: 'Dancing Script', cursive;
 
 }
 @media screen and (min-width: 761px){
-	position: fixed;
-	top: 0;
-	header{
-		height: 250px;
+	.fixed{
+		height: 100px;
 		h1{
 			font-size: 3rem;
 			line-height: 3rem;
-			padding: 1rem;
 		}
 		nav{
 			margin: 2.3rem auto 1.5rem;
@@ -67,10 +108,12 @@ font-family: 'Dancing Script', cursive;
 	}	
 }
 @media screen and (min-width: 991px){
-	header{
+	.fixed{
+		height: 200px;
 		h1{
+			font-size: 2.4rem;
 			background: url("images/site/carre.png") no-repeat 40%,
-		                url("images/site/cover.jpg") no-repeat left 40% top 50%;
+		                url("images/site/cover.jpg") no-repeat 40% 50%;
             background-size: contain;
 			padding-top: 3rem;
     		padding-left: 6rem;

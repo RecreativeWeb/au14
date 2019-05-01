@@ -5,74 +5,108 @@
 html {
   font-size: 16px; }
   html body {
-    box-sizing: border-box;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative; }
+    html body main {
+      padding-top: 250px; }
 
 @media screen and (min-width: 761px) {
   body {
     position: relative; } }
-header h1 {
-  font-family: 'Pacifico', cursive;
-  font-family: 'Dancing Script', cursive;
-  font-size: 2rem;
-  text-align: center;
-  line-height: 2rem;
-  padding: .4rem;
-  background-size: contain; }
-header nav ul li {
-  list-style-type: none; }
-  header nav ul li a {
-    font-family: 'Raleway', sans-serif;
-    text-decoration: none; }
+.fixed {
+  width: 100%;
+  max-width: 1200px;
+  height: 75px;
+  position: fixed;
+  z-index: 5000;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .fixed nav {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    background-color: black;
+    transform: left 1s ease; }
+    .fixed nav:target {
+      left: 50%; }
+    .fixed nav ul li {
+      list-style-type: none; }
+      .fixed nav ul li a {
+        font-family: 'Raleway', sans-serif;
+        text-decoration: none;
+        color: white; }
+  .fixed a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    cursor: pointer; }
+    .fixed a .fas.fa-bars {
+      display: block;
+      font-size: 2.5rem;
+      cursor: pointer; }
+  .fixed h1 {
+    font-family: 'Pacifico', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.1rem;
+    text-align: center;
+    padding: 2.2rem 0 0 1.1rem;
+    background: url("images/site/carre.png") no-repeat 18% -2%, url("images/site/cover.jpg") no-repeat 20% 4%;
+    background-size: contain; }
+    .fixed h1 .display {
+      display: none; }
+  .fixed .line {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to left, silver, black, silver);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0; }
 
 @media screen and (min-width: 501px) {
-  header h1 {
-    /*br{
-    	display: none;
-    }*/ } }
+  .fixed {
+    height: 50px; }
+    .fixed h1 {
+      /*br{
+      	display: none;
+      }*/ } }
 @media screen and (min-width: 761px) {
-  position: fixed;
-  top: 0;
-  header {
-    height: 250px; }
-    header h1 {
+  .fixed {
+    height: 100px; }
+    .fixed h1 {
       font-size: 3rem;
-      line-height: 3rem;
-      padding: 1rem; }
-    header nav {
+      line-height: 3rem; }
+    .fixed nav {
       margin: 2.3rem auto 1.5rem; }
-      header nav ul {
+      .fixed nav ul {
         display: flex;
         justify-content: space-around; }
-        header nav ul li {
+        .fixed nav ul li {
           width: 18%;
           border-top: 1px solid black;
           border-bottom: 1px solid black;
           padding-top: .4rem;
           padding-bottom: .4rem; }
-          header nav ul li a {
+          .fixed nav ul li a {
             color: black;
             font-size: 1.1rem;
             line-height: 1.1rem;
             display: block;
             text-align: center; } }
 @media screen and (min-width: 991px) {
-  header h1 {
-    background: url("images/site/carre.png") no-repeat 40%, url("images/site/cover.jpg") no-repeat left 40% top 50%;
-    background-size: contain;
-    padding-top: 3rem;
-    padding-left: 6rem; } }
-.portrait {
-  display: flex;
-  justify-content: space-between; }
-  .portrait picture {
-    width: 49%; }
-    .portrait picture img {
-      width: 100%;
-      height: auto; }
-
+  .fixed {
+    height: 200px; }
+    .fixed h1 {
+      font-size: 2.4rem;
+      background: url("images/site/carre.png") no-repeat 40%, url("images/site/cover.jpg") no-repeat 40% 50%;
+      background-size: contain;
+      padding-top: 3rem;
+      padding-left: 6rem; } }
 .accueil h2 {
   font-family: 'Dancing Script', cursive;
   padding: 1rem; }
@@ -85,6 +119,15 @@ header nav ul li {
   font-weight: 700;
   font-size: 1.5rem;
   text-align: center; }
+.sculpture .portrait, .peinture .portrait {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FF9D5C; }
+  .sculpture .portrait picture, .peinture .portrait picture {
+    width: 49%; }
+    .sculpture .portrait picture img, .peinture .portrait picture img {
+      width: 100%;
+      height: auto; }
 .sculpture .Content, .peinture .Content {
   display: flex;
   justify-content: space-around;
