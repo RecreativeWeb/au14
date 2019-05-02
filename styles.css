@@ -1,178 +1,232 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html {
-  font-size: 16px; }
-  html body {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative; }
-    html body main {
-      padding-top: 250px; }
+  font-size: 16px;
+}
+html body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+html body main {
+  padding-top: 250px;
+}
 
 @media screen and (min-width: 761px) {
   body {
-    position: relative; } }
+    position: relative;
+  }
+}
 .fixed {
   width: 100%;
   max-width: 1200px;
   height: 75px;
+  padding: 1rem;
   position: fixed;
   z-index: 5000;
   background-color: white;
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  .fixed nav {
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 50%;
-    background-color: black;
-    transform: left 1s ease; }
-    .fixed nav:target {
-      left: 50%; }
-    .fixed nav ul li {
-      list-style-type: none; }
-      .fixed nav ul li a {
-        font-family: 'Raleway', sans-serif;
-        text-decoration: none;
-        color: white; }
-  .fixed a {
-    display: block;
-    color: black;
-    text-decoration: none;
-    cursor: pointer; }
-    .fixed a .fas.fa-bars {
-      display: block;
-      font-size: 2.5rem;
-      cursor: pointer; }
-  .fixed h1 {
-    font-family: 'Pacifico', cursive;
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.1rem;
-    text-align: center;
-    padding: 2.2rem 0 0 1.1rem;
-    background: url("images/site/carre.png") no-repeat 18% -2%, url("images/site/cover.jpg") no-repeat 20% 4%;
-    background-size: contain; }
-    .fixed h1 .display {
-      display: none; }
-  .fixed .line {
-    height: 2px;
-    width: 100%;
-    background: linear-gradient(to left, silver, black, silver);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0; }
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid green;
+}
+.fixed nav {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  background-color: black;
+  transform: left 1s ease;
+}
+.fixed nav:target {
+  left: 50%;
+}
+.fixed nav ul li {
+  list-style-type: none;
+}
+.fixed nav ul li a {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  color: white;
+}
+.fixed a {
+  width: 20%;
+  display: block;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid red;
+}
+.fixed a .fas.fa-bars {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+  background: url("images/site/logo.png") no-repeat;
+  background-size: cover;
+  padding: 2rem;
+}
+.fixed h1 {
+  width: 80%;
+  font-family: "Pacifico", cursive;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.1rem;
+  text-align: left;
+  border: 1px solid red;
+}
+.fixed .line {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to left, silver, black, silver);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 
 @media screen and (min-width: 501px) {
   .fixed {
-    height: 50px; }
-    .fixed h1 {
-      /*br{
-      	display: none;
-      }*/ } }
+    height: 50px;
+  }
+  .fixed h1 {
+    /*br{
+    	display: none;
+    }*/
+  }
+}
 @media screen and (min-width: 761px) {
   .fixed {
-    height: 100px; }
-    .fixed h1 {
-      font-size: 3rem;
-      line-height: 3rem; }
-    .fixed nav {
-      margin: 2.3rem auto 1.5rem; }
-      .fixed nav ul {
-        display: flex;
-        justify-content: space-around; }
-        .fixed nav ul li {
-          width: 18%;
-          border-top: 1px solid black;
-          border-bottom: 1px solid black;
-          padding-top: .4rem;
-          padding-bottom: .4rem; }
-          .fixed nav ul li a {
-            color: black;
-            font-size: 1.1rem;
-            line-height: 1.1rem;
-            display: block;
-            text-align: center; } }
+    height: 100px;
+  }
+  .fixed h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .fixed nav {
+    margin: 2.3rem auto 1.5rem;
+  }
+  .fixed nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .fixed nav ul li {
+    width: 18%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+  .fixed nav ul li a {
+    color: black;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    display: block;
+    text-align: center;
+  }
+}
 @media screen and (min-width: 991px) {
   .fixed {
-    height: 200px; }
-    .fixed h1 {
-      font-size: 2.4rem;
-      background: url("images/site/carre.png") no-repeat 40%, url("images/site/cover.jpg") no-repeat 40% 50%;
-      background-size: contain;
-      padding-top: 3rem;
-      padding-left: 6rem; } }
+    height: 200px;
+  }
+  .fixed h1 {
+    font-size: 2.4rem;
+    background: url("images/site/carre.png") no-repeat 40%, url("images/site/cover.jpg") no-repeat 40% 50%;
+    background-size: contain;
+    padding-top: 3rem;
+    padding-left: 6rem;
+  }
+}
 .accueil h2 {
-  font-family: 'Dancing Script', cursive;
-  padding: 1rem; }
+  font-family: "Dancing Script", cursive;
+  padding: 1rem;
+}
 .accueil p {
-  font-family: 'Raleway', sans-serif;
-  padding: 0 1rem 3rem 1rem; }
+  font-family: "Raleway", sans-serif;
+  padding: 0 1rem 3rem 1rem;
+}
 
 .sculpture h2, .peinture h2 {
-  font-family: 'Bad Script', cursive;
+  font-family: "Bad Script", cursive;
   font-weight: 700;
   font-size: 1.5rem;
-  text-align: center; }
+  text-align: center;
+}
 .sculpture .portrait, .peinture .portrait {
   display: flex;
   justify-content: space-between;
-  background-color: #FF9D5C; }
-  .sculpture .portrait picture, .peinture .portrait picture {
-    width: 49%; }
-    .sculpture .portrait picture img, .peinture .portrait picture img {
-      width: 100%;
-      height: auto; }
+  background-color: #FF9D5C;
+}
+.sculpture .portrait picture, .peinture .portrait picture {
+  width: 49%;
+}
+.sculpture .portrait picture img, .peinture .portrait picture img {
+  width: 100%;
+  height: auto;
+}
 .sculpture .Content, .peinture .Content {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; }
-  .sculpture .Content .col, .peinture .Content .col {
-    width: 98%;
-    border: 1px solid white; }
-    .sculpture .Content .col.col1 article img, .peinture .Content .col.col1 article img {
-      width: 100%;
-      height: auto; }
-    .sculpture .Content .col.col2 article img, .peinture .Content .col.col2 article img {
-      width: 80%;
-      height: auto;
-      display: block;
-      margin: 0 auto; }
-    .sculpture .Content .col.col3 article img, .peinture .Content .col.col3 article img {
-      width: 90%;
-      height: auto;
-      display: block;
-      margin: 0 auto; }
-    .sculpture .Content .col h3, .peinture .Content .col h3 {
-      font-family: 'Bad Script', cursive;
-      text-align: center; }
-    .sculpture .Content .col p, .peinture .Content .col p {
-      font-family: 'Bubbler One', sans-serif;
-      font-weight: 900;
-      padding: 0 1rem 3rem 1rem; }
+  flex-wrap: wrap;
+}
+.sculpture .Content .col, .peinture .Content .col {
+  width: 98%;
+  border: 1px solid white;
+}
+.sculpture .Content .col.col1 article img, .peinture .Content .col.col1 article img {
+  width: 100%;
+  height: auto;
+}
+.sculpture .Content .col.col2 article img, .peinture .Content .col.col2 article img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.sculpture .Content .col.col3 article img, .peinture .Content .col.col3 article img {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.sculpture .Content .col h3, .peinture .Content .col h3 {
+  font-family: "Bad Script", cursive;
+  text-align: center;
+}
+.sculpture .Content .col p, .peinture .Content .col p {
+  font-family: "Bubbler One", sans-serif;
+  font-weight: 900;
+  padding: 0 1rem 3rem 1rem;
+}
 
 @media screen and (min-width: 501px) {
   .sculpture h2, .peinture h2 {
-    font-size: 3.5rem; }
+    font-size: 3.5rem;
+  }
   .sculpture .Content .col, .peinture .Content .col {
     width: 48%;
-    border: 2px solid white; } }
+    border: 2px solid white;
+  }
+}
 @media screen and (min-width: 761px) {
   .sculpture h2, .peinture h2 {
-    font-size: 4rem; }
+    font-size: 4rem;
+  }
   .sculpture .Content .col, .peinture .Content .col {
     width: 30%;
-    border: 3px solid white; } }
+    border: 3px solid white;
+  }
+}
 @media screen and (min-width: 991px) {
   .accueil h2, .scultpure h2, .peinture h2 {
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+  }
 
   .contact .carte img {
-    width: 50%; } }
+    width: 50%;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
