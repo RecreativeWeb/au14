@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Viner Hand ITC";
+  src: url("VinerHandITC.eot");
+  src: url("VinerHandITC.eot?#iefix") format("embedded-opentype"), url("VinerHandITC.woff2") format("woff2"), url("VinerHandITC.woff") format("woff"), url("VinerHandITC.svg#VinerHandITC") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +28,7 @@ html body main {
   margin-top: 7rem;
 }
 
-.fixed {
+header.fixed {
   position: fixed;
   top: 0;
   width: 100%;
@@ -35,7 +42,11 @@ html body main {
   box-shadow: -3px 3px 12px silver;
   padding: 0.8rem 0 0.5rem 0;
 }
-.fixed a {
+header.fixed div.maxWidth {
+  width: 100%;
+  max-width: 1200px;
+}
+header.fixed div.maxWidth a.hamburger {
   width: 15%;
   display: block;
   text-align: center;
@@ -43,12 +54,12 @@ html body main {
   text-decoration: none;
   cursor: pointer;
 }
-.fixed a .fas.fa-bars {
+header.fixed div.maxWidth a.hamburger .fas.fa-bars {
   display: block;
   font-size: 1.8rem;
   padding: 1rem 0 1rem 0;
 }
-.fixed h1 {
+header.fixed div.maxWidth h1 {
   width: 85%;
   font-family: var(--fontTitle1);
   font-size: var(--fontSizeTitle1M);
@@ -59,7 +70,7 @@ html body main {
   background: url(images/site/cover1.png) no-repeat top -35px left -11px;
   background-size: 127px 117px;
 }
-.fixed nav {
+header.fixed div.maxWidth nav {
   width: 50%;
   height: 100vh;
   position: absolute;
@@ -72,49 +83,63 @@ html body main {
   	right: 0;
   }*/
 }
-.fixed nav ul li {
+header.fixed div.maxWidth nav ul li {
   list-style-type: none;
   border-bottom: 1px solid white;
   padding: 1.5rem 0 1.5rem 1rem;
 }
-.fixed nav ul li a {
+header.fixed div.maxWidth nav ul li a {
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   color: white;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
-.fixed nav .other .facebook:before {
+header.fixed div.maxWidth nav .other .facebook:before {
+  font-family: "fontawesome";
   content: "f09a";
 }
+header.fixed div.maxWidth nav .other .atelier {
+  font-family: "Viner Hand ITC";
+  font-size: 1rem;
+}
 
-@media screen and (min-width: 501px) and (orientation: landscape) and (max-width: 760px) {
-  .fixed h1 {
-    background: url(images/site/cover1.png) no-repeat top -35px left 118px;
-    background-size: 127px 117px;
-  }
+/*@media screen and (min-width: 501px) and (orientation: landscape) and (max-width: 760px){
+	.fixed{
+		h1{
+			background: url(images/site/cover1.png) no-repeat top -35px left 118px;
+			background-size: 127px 117px;
+		}
+	}
 }
-@media screen and (min-width: 761px) {
-  .fixed a {
-    display: none;
-  }
-  .fixed h1 {
-    width: 20%;
-    text-align: left;
-  }
-  .fixed nav {
-    position: relative;
-    width: 75px;
-    background-color: white;
-  }
-  .fixed nav ul {
-    display: flex;
-    justify-content: space-around;
-  }
-  .fixed nav ul li a {
-    color: black;
-  }
-}
+
+
+@media screen and (min-width: 761px){
+	.fixed{
+		.hamburger{
+			display: none;
+		}
+		h1{
+			width: 30%;
+			text-align: left;
+		}
+		nav{
+			position: relative;
+			width: 65%;
+			height: auto;
+			background-color: white;
+			ul{
+				display: flex;
+				justify-content: space-around;
+				li{
+					a{
+						color: black;
+					}
+				}
+			}
+		}
+	}
+}*/
 /*
 	.fixed{
 		height: 100px;
@@ -165,6 +190,13 @@ html body main {
 #accueil:target .autoplay {
   display: none;
 }
+#accueil:target .vitrineM img {
+  display: block;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
 #accueil:target h2 {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
@@ -175,6 +207,14 @@ html body main {
   padding: 0 1rem 3rem 1rem;
 }
 
+@media screen and (min-width: 760px) {
+  #accueil .autoplay {
+    display: block;
+  }
+  #accueil .vitrineM {
+    display: none;
+  }
+}
 .sculpture h2, .peinture h2 {
   font-family: "Bad Script", cursive;
   font-weight: 700;
