@@ -1,0 +1,41 @@
+footer {
+	width: 100%;
+	background-color: black;
+	color: white;
+	padding: .5rem;
+	h3{
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		text-align: center;
+	}
+	.mentions{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: .5rem;
+		p{
+			width: 90%;
+			font-family: 'Raleway', sans-serif;
+			font-size: .8rem;
+			padding: .4rem;
+			a{
+				color: white;
+			}
+		}
+	}
+	.copyright{
+		font-family: 'Raleway', sans-serif;
+		display: block;
+		text-align: center;
+	}
+}
+@media screen and (min-width: 760px){
+	footer{
+		.mentions{
+			p{
+				width: 30%;
+			}
+		}
+	}
+}

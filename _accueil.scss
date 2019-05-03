@@ -1,6 +1,12 @@
-.accueil{
+#accueil:target{
+	padding-top: 7rem;
+	margin-top: -7rem;
+	.autoplay{
+		display: none;
+	}
 	h2{
-    	font-family: 'Dancing Script', cursive;
+    	font-family: 'Raleway', sans-serif;
+    	font-size: 1rem;
 		padding: 1rem;
     }
 	p{

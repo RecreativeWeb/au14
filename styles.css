@@ -1,25 +1,31 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
+
+:root {
+  --fontTitle1: "Pacifico", cursive;
+  --fontSizeTitle1M: 1.8rem;
+}
 
 html {
-  font-size: 16px; }
-  html body {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative; }
-    html body main {
-      padding-top: 250px; }
-
-@media screen and (min-width: 761px) {
-  body {
-    position: relative; } }
-.fixed {
+  font-size: 16px;
+}
+html body {
+  position: relative;
+}
+html body main {
   width: 100%;
   max-width: 1200px;
-  height: 75px;
+  margin: 0 auto;
+  margin-top: 7rem;
+}
+
+.fixed {
   position: fixed;
+  top: 0;
+  width: 100%;
+  height: 75px;
   z-index: 5000;
   background-color: white;
   display: flex;
@@ -27,53 +33,89 @@ html {
   align-items: center;
   border-bottom: 1px solid snow;
   box-shadow: -3px 3px 12px silver;
-  padding: .8rem 0 .5rem 0; }
-  .fixed nav {
-    width: 50%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: -50%;
-    background-color: black;
-    transition: right 1s ease; }
-    .fixed nav ul li {
-      list-style-type: none;
-      border-bottom: 1px solid white;
-      padding: 1.5rem 0 1.5rem 1rem; }
-      .fixed nav ul li a {
-        font-family: 'Raleway', sans-serif;
-        text-decoration: none;
-        color: white;
-        cursor: pointer;
-        font-size: 1.2rem; }
-  .fixed nav:target {
-    right: 0; }
-  .fixed a {
-    width: 15%;
-    display: block;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-    cursor: pointer; }
-    .fixed a .fas.fa-bars {
-      display: block;
-      font-size: 1.8rem;
-      padding: 1rem 0 1rem 0; }
-  .fixed h1 {
-    width: 85%;
-    font-family: 'Pacifico', cursive;
-    font-size: 1.8rem;
-    line-height: 2rem;
-    text-align: center;
-    background: url(images/site/cover1.png) no-repeat top -35px left -11px;
-    background-size: 127px 117px; }
+  padding: 0.8rem 0 0.5rem 0;
+}
+.fixed a {
+  width: 15%;
+  display: block;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.fixed a .fas.fa-bars {
+  display: block;
+  font-size: 1.8rem;
+  padding: 1rem 0 1rem 0;
+}
+.fixed h1 {
+  width: 85%;
+  font-family: var(--fontTitle1);
+  font-size: var(--fontSizeTitle1M);
+  font-family: "Pacifico", cursive;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-align: center;
+  background: url(images/site/cover1.png) no-repeat top -35px left -11px;
+  background-size: 127px 117px;
+}
+.fixed nav {
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  /*right: -50%;*/
+  right: 0;
+  background-color: black;
+  transition: right 1s ease;
+  /*&:target{
+  	right: 0;
+  }*/
+}
+.fixed nav ul li {
+  list-style-type: none;
+  border-bottom: 1px solid white;
+  padding: 1.5rem 0 1.5rem 1rem;
+}
+.fixed nav ul li a {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.fixed nav .other .facebook:before {
+  content: "f09a";
+}
 
-@media screen and (min-width: 501px) and (orientation: landscape) {
+@media screen and (min-width: 501px) and (orientation: landscape) and (max-width: 760px) {
   .fixed h1 {
     background: url(images/site/cover1.png) no-repeat top -35px left 118px;
-    background-size: 127px 117px; } }
+    background-size: 127px 117px;
+  }
+}
+@media screen and (min-width: 761px) {
+  .fixed a {
+    display: none;
+  }
+  .fixed h1 {
+    width: 20%;
+    text-align: left;
+  }
+  .fixed nav {
+    position: relative;
+    width: 75px;
+    background-color: white;
+  }
+  .fixed nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .fixed nav ul li a {
+    color: black;
+  }
+}
 /*
-@media screen and (min-width: 761px){
 	.fixed{
 		height: 100px;
 		h1{
@@ -116,67 +158,93 @@ html {
 		}
 	}
 }*/
-.accueil h2 {
-  font-family: 'Dancing Script', cursive;
-  padding: 1rem; }
-.accueil p {
-  font-family: 'Raleway', sans-serif;
-  padding: 0 1rem 3rem 1rem; }
+#accueil:target {
+  padding-top: 7rem;
+  margin-top: -7rem;
+}
+#accueil:target .autoplay {
+  display: none;
+}
+#accueil:target h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+}
+#accueil:target p {
+  font-family: "Raleway", sans-serif;
+  padding: 0 1rem 3rem 1rem;
+}
 
 .sculpture h2, .peinture h2 {
-  font-family: 'Bad Script', cursive;
+  font-family: "Bad Script", cursive;
   font-weight: 700;
   font-size: 1.5rem;
-  text-align: center; }
+  text-align: center;
+}
 .sculpture .portrait, .peinture .portrait {
   display: flex;
   justify-content: space-between;
-  background-color: #FF9D5C; }
-  .sculpture .portrait picture, .peinture .portrait picture {
-    width: 49%; }
-    .sculpture .portrait picture img, .peinture .portrait picture img {
-      width: 100%;
-      height: auto; }
+  background-color: #FF9D5C;
+}
+.sculpture .portrait picture, .peinture .portrait picture {
+  width: 49%;
+}
+.sculpture .portrait picture img, .peinture .portrait picture img {
+  width: 100%;
+  height: auto;
+}
 .sculpture .Content, .peinture .Content {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; }
-  .sculpture .Content .col, .peinture .Content .col {
-    width: 98%;
-    border: 1px solid white; }
-    .sculpture .Content .col.col1 article img, .peinture .Content .col.col1 article img {
-      width: 100%;
-      height: auto; }
-    .sculpture .Content .col.col2 article img, .peinture .Content .col.col2 article img {
-      width: 80%;
-      height: auto;
-      display: block;
-      margin: 0 auto; }
-    .sculpture .Content .col.col3 article img, .peinture .Content .col.col3 article img {
-      width: 90%;
-      height: auto;
-      display: block;
-      margin: 0 auto; }
-    .sculpture .Content .col h3, .peinture .Content .col h3 {
-      font-family: 'Bad Script', cursive;
-      text-align: center; }
-    .sculpture .Content .col p, .peinture .Content .col p {
-      font-family: 'Bubbler One', sans-serif;
-      font-weight: 900;
-      padding: 0 1rem 3rem 1rem; }
+  flex-wrap: wrap;
+}
+.sculpture .Content .col, .peinture .Content .col {
+  width: 98%;
+  border: 1px solid white;
+}
+.sculpture .Content .col.col1 article img, .peinture .Content .col.col1 article img {
+  width: 100%;
+  height: auto;
+}
+.sculpture .Content .col.col2 article img, .peinture .Content .col.col2 article img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.sculpture .Content .col.col3 article img, .peinture .Content .col.col3 article img {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.sculpture .Content .col h3, .peinture .Content .col h3 {
+  font-family: "Bad Script", cursive;
+  text-align: center;
+}
+.sculpture .Content .col p, .peinture .Content .col p {
+  font-family: "Bubbler One", sans-serif;
+  font-weight: 900;
+  padding: 0 1rem 3rem 1rem;
+}
 
 @media screen and (min-width: 501px) {
   .sculpture h2, .peinture h2 {
-    font-size: 3.5rem; }
+    font-size: 3.5rem;
+  }
   .sculpture .Content .col, .peinture .Content .col {
     width: 48%;
-    border: 2px solid white; } }
+    border: 2px solid white;
+  }
+}
 @media screen and (min-width: 761px) {
   .sculpture h2, .peinture h2 {
-    font-size: 4rem; }
+    font-size: 4rem;
+  }
   .sculpture .Content .col, .peinture .Content .col {
     width: 30%;
-    border: 3px solid white; }
+    border: 3px solid white;
+  }
 
   .contact .carte, .contact .ville {
     width: 80%;
@@ -186,7 +254,8 @@ html {
     padding: 2rem;
     margin: 0 auto;
     border: 1px solid silver;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+  }
   .contact .zoom {
     width: 80%;
     height: auto;
@@ -195,16 +264,60 @@ html {
     padding: 2rem;
     margin-bottom: 1rem;
     display: flex;
-    justify-content: space-between; }
-    .contact .zoom .rue {
-      width: 20%;
-      height: auto;
-      display: block; }
-    .contact .zoom .adresse {
-      width: 60%;
-      text-align: left; } }
+    justify-content: space-between;
+  }
+  .contact .zoom .rue {
+    width: 20%;
+    height: auto;
+    display: block;
+  }
+  .contact .zoom .adresse {
+    width: 60%;
+    text-align: left;
+  }
+}
 @media screen and (min-width: 991px) {
   .accueil h2, .scultpure h2, .peinture h2 {
-    font-size: 1.6rem; } }
+    font-size: 1.6rem;
+  }
+}
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+}
+footer h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+footer .mentions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+footer .mentions p {
+  width: 90%;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+  padding: 0.4rem;
+}
+footer .mentions p a {
+  color: white;
+}
+footer .copyright {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  text-align: center;
+}
+
+@media screen and (min-width: 760px) {
+  footer .mentions p {
+    width: 30%;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
